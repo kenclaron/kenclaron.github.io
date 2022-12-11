@@ -15,14 +15,14 @@ import EmailIcon from "components/icons/EmailIcon";
 import Profile from "components/sections/header/Profile";
 import Status from "components/sections/header/Status";
 
-import useScroll from "utils/hooks/useScroll";
 import useForceScroll from "utils/hooks/useForceScroll";
+import useScroll from "utils/hooks/useScroll";
 
 function Header() {
   const { t } = useTranslation();
   const { breakpoint } = useBreakpoint(BREAKPOINTS);
   const { scrollY, innerHeight } = useScroll();
-  const {} = useForceScroll();
+  useForceScroll();
 
   const translateY =
     scrollY / innerHeight < 0.6

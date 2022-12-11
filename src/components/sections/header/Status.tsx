@@ -106,6 +106,8 @@ function Status() {
         }, 5000)
       );
     launchAPI();
+    // For proper notification only when the ServiceStatus.WAITING
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
