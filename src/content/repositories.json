@@ -1,0 +1,48 @@
+{
+  "ignore": [575991907, 546208000, 472078526, 439404144],
+  "filters": [
+    {
+      "name": "All",
+      "filter": null
+    },
+    {
+      "name": "TypeScript",
+      "filter": { "params": ["language", "topics"], "value": [] }
+    },
+    {
+      "name": "JavaScript",
+      "filter": { "params": ["language", "topics"], "value": [] }
+    },
+    {
+      "name": "React",
+      "filter": { "params": ["language", "topics"], "value": [] }
+    },
+    {
+      "name": "SCSS",
+      "filter": { "params": ["language", "topics"], "value": [] }
+    },
+    {
+      "name": "Vue",
+      "filter": { "params": ["language", "topics"], "value": [] }
+    },
+    {
+      "name": "Production",
+      "filter": {
+        "params": ["homepage"],
+        "value": ["vercel.app", "onrender.com"]
+      }
+    },
+    {
+      "name": "Docker Package",
+      "filter": { "params": ["topics"], "value": ["docker"] }
+    },
+    {
+      "name": "NPM Package",
+      "filter": { "params": ["topics"], "value": ["npm"] }
+    },
+    {
+      "name": "C#",
+      "filter": { "params": ["language", "topics"], "value": [] }
+    }
+  ]
+}
