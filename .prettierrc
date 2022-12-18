@@ -1,0 +1,17 @@
+{
+  "singleQuote": false,
+  "semi": true,
+  "importOrder": [
+    "^react",
+    "^((?!/).)*$",
+    "fontsource",
+    "<THIRD_PARTY_MODULES>",
+    "^containers/(.*)$",
+    "^components/(.*)$",
+    "^hooks/(.*)$",
+    "^utils/(.*)$",
+    "^i18n/(.*)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
