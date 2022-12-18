@@ -16,10 +16,11 @@ jobs:
         env:
           REACT_APP_USERNAME: ${{ secrets.REACT_APP_USERNAME }}
           REACT_APP_API_SERVICE: ${{ secrets.REACT_APP_API_SERVICE }}
-          REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
+          REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
           branch: gh-pages
           folder: dist
