@@ -7,8 +7,11 @@ import { Repositories, User } from "utils/types/github.type";
 const USERNAME = process.env.REACT_APP_USERNAME as string;
 const TOKEN = process.env.REACT_APP_GITHUB_TOKEN as string;
 
+/**
+ * Use only no-access permissions token
+ */
 const octokit = new Octokit({
-  auth: TOKEN,
+  auth: window.atob(TOKEN),
 });
 
 export class GitHub {
