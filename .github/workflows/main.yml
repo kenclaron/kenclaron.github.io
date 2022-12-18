@@ -1,5 +1,5 @@
 name: Build and Deploy
-on: [push]
+on: [push] # defaults to master
 permissions:
   contents: write
 jobs:
@@ -19,5 +19,7 @@ jobs:
           REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
 
       - name: Deploy 🚀
-        run: |
-          npm run-script deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
