@@ -57,10 +57,15 @@ const isFiltered = (repository: Repositories[number], filter?: string) => {
 
   if (obj.filter)
     return obj.filter.params.some((param: string) => {
-      const items = (repository as any)[param];
+      let items = (repository as any)[param];
 
-      if (!obj.filter.value.length) return items.includes(obj.name);
-      else return obj.filter.value.some((value) => items.includes(value));
+      if (typeof items === "string") items = items.toLowerCase();
+      else if (typeof items === "object")
+        items = items.map((i: string) => i.toLowerCase());
+
+      if (!obj.filter.value.length)
+        return items?.includes(obj.name.toLowerCase());
+      else return obj.filter.value.some((value) => items?.includes(value));
     });
   else return true;
 };

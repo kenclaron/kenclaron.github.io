@@ -103,7 +103,7 @@ function Status() {
           else if (timer) clearInterval(timer);
 
           return status;
-        }, 5000)
+        }, 15000)
       );
     launchAPI();
     // For proper notification only when the ServiceStatus.WAITING
