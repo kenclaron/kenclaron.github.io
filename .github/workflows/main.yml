@@ -1,0 +1,25 @@
+name: Build and Deploy
+on: [push] # defaults to master
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run-script build
+        env:
+          REACT_APP_USERNAME: ${{ secrets.REACT_APP_USERNAME }}
+          REACT_APP_API_SERVICE: ${{ secrets.REACT_APP_API_SERVICE }}
+          REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
