@@ -29,7 +29,7 @@
       "name": "Production",
       "filter": {
         "params": ["homepage"],
-        "value": ["vercel.app", "onrender.com"]
+        "value": ["vercel.app", "onrender.com", "github.io"]
       }
     },
     {
