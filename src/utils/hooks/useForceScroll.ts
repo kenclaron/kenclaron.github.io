@@ -1,22 +1,24 @@
 import React from "react";
 
 export default function useForceScroll(
-  delay = 250,
+  delay = 500,
   y: number = window.innerHeight + 2
 ) {
   const [previousY, setPreviousY] = React.useState<number>(0);
   const [isTouch, setIsTouch] = React.useState<boolean>(false);
 
   const scroll = React.useCallback(() => {
+    if (window.scrollY === 0) return;
+
+    const toBottom = window.scrollY > previousY;
+    const belowTopLimit = window.scrollY > 128;
+    const belowBottomLimit = window.scrollY > y - 128;
+    const aboveTargetPosition = window.scrollY < y;
+
+    setPreviousY(window.scrollY);
+
     debounce(() => {
-      const toBottom = window.scrollY > previousY;
-      const belowTopLimit = window.scrollY > 128;
-      const belowBottomLimit = window.scrollY > y - 128;
-      const aboveTargetPosition = window.scrollY < y;
-
-      setPreviousY(window.scrollY);
-
-      if (!aboveTargetPosition) return;
+      if (!aboveTargetPosition || window.scrollY === 0) return;
 
       if ((toBottom && belowTopLimit) || belowBottomLimit)
         window.scrollTo({ top: y });
