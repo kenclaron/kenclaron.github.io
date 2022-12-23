@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function useDragScroll() {
+export default function useDragScroll(isSupportTouch: boolean = true) {
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [lastMousePosition, setLastMousePosition] = useState(null);
   const [isMoved, setIsMoved] = useState(false);
@@ -38,6 +38,7 @@ export default function useDragScroll() {
 
       setLastMousePosition(null);
     }
+
     function onMouseMove(e: any) {
       if (!isMouseDown) return;
       if (ref.current === null) return;
@@ -58,17 +59,21 @@ export default function useDragScroll() {
     window.addEventListener("mouseup", onMouseUp);
     window.addEventListener("mousemove", onMouseMove);
 
-    window.addEventListener("touchend", onMouseUp);
-    window.addEventListener("touchmove", onMouseMove);
+    if (isSupportTouch) {
+      window.addEventListener("touchend", onMouseUp);
+      window.addEventListener("touchmove", onMouseMove);
+    }
 
     return () => {
       window.removeEventListener("mouseup", onMouseUp);
       window.removeEventListener("mousemove", onMouseMove);
 
-      window.removeEventListener("touchend", onMouseUp);
-      window.removeEventListener("touchmove", onMouseMove);
+      if (isSupportTouch) {
+        window.removeEventListener("touchend", onMouseUp);
+        window.removeEventListener("touchmove", onMouseMove);
+      }
     };
-  }, [isMouseDown, lastMousePosition]);
+  }, [isMouseDown, isSupportTouch, lastMousePosition]);
 
   return {
     events: {

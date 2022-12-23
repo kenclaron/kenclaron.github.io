@@ -42,7 +42,7 @@ function Header() {
         $direction="row"
         style={{ gap: 16, position: "absolute", bottom: 64 }}
       >
-        <Button as="a" href="#projects-tabs" style={{ gap: 12 }}>
+        <Button as="a" href="#projects-information" style={{ gap: 12 }}>
           <ArrowIcon color={theme.colors.typography.primary} />
           {breakpoint !== "xs" && t("button.seemore")}
         </Button>

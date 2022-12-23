@@ -17,8 +17,6 @@ export const resources = {
   },
 };
 
-console.log(document.documentElement);
-
 const config: {
   detector: DetectorOptions;
   i18next: InitOptions;

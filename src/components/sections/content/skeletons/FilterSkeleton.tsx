@@ -4,9 +4,9 @@ import { DEVICE } from "themes";
 
 import styled from "@emotion/styled";
 
-export const FilterSkeleton = ({ id }: { id: string }) => {
+export const FilterSkeleton = () => {
   return (
-    <Stack id={id}>
+    <Stack>
       {[...Array(10).keys()].map((skeleton) => (
         <Skeleton
           key={skeleton}

@@ -24,7 +24,7 @@ export function FilterContainer({ filter, setFilter }: FilterContainerProps) {
   };
 
   return (
-    <Container id="projects-tabs" role="tabpanel">
+    <Container role="tabpanel">
       <FieldSet
         className="fieldset-filter"
         hide={true}

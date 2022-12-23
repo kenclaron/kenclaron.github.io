@@ -7,6 +7,7 @@ import { Theme } from "themes";
 import { ProjectsContainer } from "../projects/ProjectsContainer";
 import { useTheme } from "@emotion/react";
 
+import { Anchor } from "components/atoms/Anchor";
 import { Stack } from "components/atoms/Stack";
 import CollectionsIcon from "components/icons/CollectionsIcon";
 import { CardHeader } from "components/sections/content/Cards";
@@ -32,6 +33,7 @@ export function Projects() {
       as="section"
       id="projects"
     >
+      <Anchor id="projects-information" />
       <CardHeader
         content={t("cards.projects.content")}
         title={t("cards.projects.title")}
@@ -49,7 +51,7 @@ export function Projects() {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <FilterSkeleton id="projects-tabs" />
+          <FilterSkeleton />
           <GridContent>
             {[1, 2, 3, 4, 5, 6].map((value) => (
               <ProjectSkeleton key={value} />

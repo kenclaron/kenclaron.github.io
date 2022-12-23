@@ -5,6 +5,7 @@ import { DEVICE } from "themes";
 import styled from "@emotion/styled";
 
 import useDragScroll from "utils/hooks/useDragScroll";
+import useTouchScreen from "utils/hooks/useTouch";
 
 export const FieldSet = ({
   name,
@@ -21,7 +22,8 @@ export const FieldSet = ({
   onMouseLeave?: MouseEventHandler<HTMLFieldSetElement>;
   hide?: boolean;
 }) => {
-  const dragProps = useDragScroll();
+  const { hasTouchScreen } = useTouchScreen();
+  const dragProps = useDragScroll(!hasTouchScreen);
 
   return (
     <StyledFieldSet
