@@ -73,9 +73,8 @@ body {
 
 .skeleton.status {
   position: absolute;
-  max-width: 15vw;
   border-radius: 32px;
-  width: 112px;
+  min-width: 134px;
   height: 48px;
   right: 24px;
   top: 24px;
