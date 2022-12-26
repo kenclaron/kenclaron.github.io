@@ -61,7 +61,7 @@ const isFiltered = (repository: Repositories[number], filter?: string) => {
 
       if (typeof items === "string") items = items.toLowerCase();
       else if (typeof items === "object")
-        items = items.map((i: string) => i.toLowerCase());
+        items = items?.map((i: string) => i.toLowerCase());
 
       if (!obj.filter.value.length)
         return items?.includes(obj.name.toLowerCase());
