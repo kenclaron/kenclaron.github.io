@@ -1,0 +1,60 @@
+[
+  {
+    "company": {
+      "ru": "ООО Лаборатория Дизайна",
+      "en": "Design Lab Ltd"
+    },
+    "date": {
+      "started_at": "2021-12-01",
+      "ended_at": "2022-09-01"
+    },
+    "description": {
+      "ru": "Разработка и редактирование карточек товаров с использованием шаблонизатора handlebars.js, верстка адаптивного лендинга и шаблонов страниц на основе дизайна из Figma с использованием HTML/CSS/JS.",
+      "en": "Development and editing product cards using the handlebars.js template engine, layout of an adaptive landing page and page templates based on Figma design using HTML/CSS/JS."
+    },
+    "image": {
+      "name": "saharok.store",
+      "color": "#FFDFEF"
+    },
+    "inn": 5047251369,
+    "location": {
+      "ru": "Россия, Московская обл., г. Долгопрудный",
+      "en": "Russia, Moscow region, Dolgoprudny"
+    },
+    "products": ["https://saharok.store", "https://saharok.info"],
+    "profession": {
+      "ru": "Frontend Разработчик",
+      "en": "Frontend Developer"
+    },
+    "url": "https://saharok.info/"
+  },
+  {
+    "company": {
+      "ru": "ООО Интэнт",
+      "en": "Intent Ltd"
+    },
+    "date": {
+      "started_at": "2022-09-01",
+      "ended_at": "%current%"
+    },
+    "description": {
+      "ru": "Разработка сервиса ПИР.БилдДокс с использованием React и MUI-фреймворка. Поддержка фронтенд-части сервиса БилдДокс на React. Внедрение нового функционала, работа с внешними API, интеграция ЭЦП и данных сервисов-партнеров.",
+      "en": "Development of PIR.BuildDocs service using React and MUI framework. Support for the front-end part of the BuildDocs service. Implementation of new functionality, work with a large amount of data and users, integration of EDS into services."
+    },
+    "image": {
+      "name": "BuildDocs",
+      "color": "#A1DCFF"
+    },
+    "inn": 7839136848,
+    "location": {
+      "ru": "Россия, г. Санкт-Петербург",
+      "en": "Russia, St. Petersburg"
+    },
+    "products": ["https://pir.builddocs.online", "https://builddocs.online"],
+    "profession": {
+      "ru": "Frontend Разработчик",
+      "en": "Frontend Developer"
+    },
+    "url": "https://builddocs.ru/"
+  }
+]
