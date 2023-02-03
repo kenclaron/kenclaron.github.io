@@ -1,0 +1,130 @@
+/** Scrollbar styles **/
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+  background-color: transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+  background-color: transparent;
+}
+::-webkit-resizer {
+  background-color: transparent;
+}
+
+/** Default styles for skeleton loader **/
+body {
+  margin: 0;
+  height: 200vh;
+}
+
+.skeleton-container {
+  height: 100vh;
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.skeleton {
+  float: left;
+  margin: 8px;
+  border-radius: 8px;
+  background-image: linear-gradient(90deg, #ddd 0, #eee 300px, #ddd 600px);
+  background-size: 600px;
+  animation: shine-lines 4s infinite linear;
+}
+
+.skeleton.avatar {
+  position: absolute;
+  max-width: 30vw;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  left: 24px;
+  top: 24px;
+}
+
+.skeleton.profile-text {
+  position: absolute;
+  max-width: 30vw;
+  border-radius: 16px;
+  width: 196px;
+  height: 32px;
+  left: 80px;
+  top: 34px;
+}
+
+.skeleton.status {
+  position: absolute;
+  border-radius: 32px;
+  min-width: 134px;
+  height: 48px;
+  right: 24px;
+  top: 24px;
+}
+
+.skeleton.heading {
+  width: 75vw;
+  height: 8em;
+  margin: 4px;
+}
+
+@keyframes shine-lines {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+
+/** Default styles for skeleton loader in dark mode **/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111111;
+  }
+
+  .skeleton {
+    background-image: linear-gradient(90deg, #222 0, #333 300px, #222 600px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .skeleton.heading {
+    height: 6.5em;
+  }
+}
+
+@media (max-width: 900px) {
+  .skeleton.heading {
+    height: 4em;
+  }
+}
+
+@media (max-width: 600px) {
+  .skeleton.profile-text {
+    display: none;
+  }
+
+  .skeleton.heading {
+    height: 10.75vw;
+    width: 85vw;
+  }
+}
