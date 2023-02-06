@@ -49,11 +49,11 @@ export const Container = styled.footer`
     width: 100%;
   }
 
-  align-items: center;
   background-color: ${(props: any) => props.theme.colors.background?.paper};
   display: grid;
-  height: 50vh;
+  align-items: center;
   justify-items: center;
+  height: 50vh;
   max-height: 392px;
   min-height: 196px;
   position: relative;
