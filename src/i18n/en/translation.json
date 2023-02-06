@@ -25,5 +25,6 @@
   "notifications.requests.timeout": "It seems that the data from the server is taking longer than expected. \nPossible solution: Refresh the page.",
   "meta.title": "Personal website",
   "meta.description": "Personal website of Frontend developer Dmitry Britov.",
-  "cards.projects.homepage": "Open"
+  "cards.projects.homepage": "Open",
+  "button.email": "Contact me"
 }

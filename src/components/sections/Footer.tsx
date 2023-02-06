@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Theme } from "themes";
 
 import { useTheme } from "@emotion/react";
@@ -13,13 +15,14 @@ import { Color } from "utils/color";
 
 export function Footer() {
   const theme: Theme = useTheme();
+  const { t } = useTranslation();
 
   return (
     <Container>
       <Stack $direction="row" style={{ gap: 16 }}>
         <Button as="a" href={`mailto:${PERSON.email}`} style={{ gap: 12 }}>
           <EmailIcon color={theme.colors.typography.primary} />
-          <p>Написать письмо</p>
+          <p>{t("button.email")}</p>
         </Button>
         <Button as="a" href={PERSON.url} target="_blank">
           <GitHubIcon color={theme.colors.typography.primary} />
@@ -46,11 +49,11 @@ export const Container = styled.footer`
     width: 100%;
   }
 
-  align-items: center;
   background-color: ${(props: any) => props.theme.colors.background?.paper};
   display: grid;
-  height: 50vh;
+  align-items: center;
   justify-items: center;
+  height: 50vh;
   max-height: 392px;
   min-height: 196px;
   position: relative;

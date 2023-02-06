@@ -25,5 +25,6 @@
   "cards.job.title": "Работа",
   "cards.job.content": "Коммерческие проекты, над которыми я работал.",
   "notifications.requests.timeout": "Кажется, данные от сервера поступают дольше, чем ожидалось. Возможное решение проблемы: обновите страницу.",
-  "cards.projects.homepage": "Открыть"
+  "cards.projects.homepage": "Открыть",
+  "button.email": "Написать письмо"
 }
