@@ -32,7 +32,6 @@ const config: {
       kk: ["ru", "en"],
       default: ["en"],
     },
-    debug: true,
     resources,
     detection: {
       order: ["querystring", "navigator"],

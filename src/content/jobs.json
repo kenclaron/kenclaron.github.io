@@ -1,16 +1,16 @@
 [
   {
     "company": {
-      "ru": "ООО Лаборатория Дизайна",
-      "en": "Design Lab Ltd"
+      "ru": "ООО ЗЕФИРЛАБ",
+      "en": "ZephyrLab Ltd"
     },
     "date": {
-      "started_at": "2021-12-01",
+      "started_at": "2020-12-01",
       "ended_at": "2022-09-01"
     },
     "description": {
-      "ru": "Разработка и редактирование карточек товаров с использованием шаблонизатора handlebars.js, верстка адаптивного лендинга и шаблонов страниц на основе дизайна из Figma с использованием HTML/CSS/JS.",
-      "en": "Development and editing product cards using the handlebars.js template engine, layout of an adaptive landing page and page templates based on Figma design using HTML/CSS/JS."
+      "ru": "Внедрение функционала редактора карточек товара на React + redux-toolkit. Разработка новостной ленты и оповещения событий посредством react-query. Реализация авторизации на сервисе и определение ролей для возможности включения доступного функционала. Адаптивная кросс-браузерная верстка основного лендинга сервиса и промо-лендингов. Прототипирование шаблонов .hbs (Handlebars.js) и многое другое.",
+      "en": "Implementation of the functionality of the product card editor on React + redux-toolkit. Embedding newsfeed and events with react-query. Implementation of authorization on the service and definition of roles to enable the available functionality. Adaptive cross-browser layout of the main landing page and promo landing pages of the service. Prototyping .hbs templates (Handlebars.js) and more."
     },
     "image": {
       "name": "saharok.store",
@@ -30,7 +30,7 @@
   },
   {
     "company": {
-      "ru": "ООО Интэнт",
+      "ru": "ООО ИНТЭНТ",
       "en": "Intent Ltd"
     },
     "date": {
@@ -38,8 +38,8 @@
       "ended_at": "%current%"
     },
     "description": {
-      "ru": "Разработка сервиса ПИР.БилдДокс с использованием React и MUI-фреймворка. Поддержка фронтенд-части сервиса БилдДокс на React. Внедрение нового функционала, работа с внешними API, интеграция ЭЦП и данных сервисов-партнеров.",
-      "en": "Development of PIR.BuildDocs service using React and MUI framework. Support for the front-end part of the BuildDocs service. Implementation of new functionality, work with a large amount of data and users, integration of EDS into services."
+      "ru": "Разработка Front-End сервисов БилдДокс (ИД и ПИР) с использованием React и MUI-фреймворка. Взаимодействие с API микросервисной архитектуры: профили, организации, проекты, договоры, исполнительная документация, уведомления (посредством react-query, axios). Написание unit-тестов с помощью Jest, @testing-library/react. Внедрение нового функционала, интеграция ЭЦП и данных сервисов-партнеров, работа с внешними API и многое другое.",
+      "en": "Development of BuildDocs Front-End services using React and MUI framework. Interaction with the microservice architecture API: profiles, organizations, projects, contracts, executive documentation, notifications (via react-query, axios). Writing unit tests with Jest, @testing-library/react. Implementation of new functionality, integration of EDS and data from partner, work with external APIs services and more."
     },
     "image": {
       "name": "BuildDocs",
