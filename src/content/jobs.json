@@ -26,7 +26,7 @@
       "ru": "Frontend Разработчик",
       "en": "Frontend Developer"
     },
-    "url": "https://saharok.info/"
+    "url": "https://saharok.info"
   },
   {
     "company": {
@@ -35,7 +35,7 @@
     },
     "date": {
       "started_at": "2022-09-01",
-      "ended_at": "%current%"
+      "ended_at": "2023-04-01"
     },
     "description": {
       "ru": "Разработка Front-End сервисов БилдДокс (ИД и ПИР) с использованием React и MUI-фреймворка. Взаимодействие с API микросервисной архитектуры: профили, организации, проекты, договоры, исполнительная документация, уведомления (посредством react-query, axios). Написание unit-тестов с помощью Jest, @testing-library/react. Внедрение нового функционала, интеграция ЭЦП и данных сервисов-партнеров, работа с внешними API и многое другое.",
@@ -55,6 +55,35 @@
       "ru": "Frontend Разработчик",
       "en": "Frontend Developer"
     },
-    "url": "https://builddocs.ru/"
+    "url": "https://builddocs.ru"
+  },
+  {
+    "company": {
+      "ru": "ООО НОВЫЕ ОБЛАЧНЫЕ ТЕХНОЛОГИИ",
+      "en": "New Cloud Technologies LLC"
+    },
+    "date": {
+      "started_at": "2023-04-01",
+      "ended_at": "%current%"
+    },
+    "description": {
+      "ru": "Разработка мессенджера и ВКС: React, TypeScript, Meteor, TanStack Query, FSD. Архитектура и рефакторинг Legacy, развитие UI Kit, технические исследования и документация. Планирование и декомпозиция задач, PBR, Agile. Менторинг и онбординг разработчиков, межкомандное взаимодействие.",
+      "en": "Developing messenger and video conferencing app with React, TypeScript, Meteor, TanStack Query, FSD. Architecture, legacy refactoring and UI Kit development. Technical research and documentation, task planning and decomposition, PBR and Agile processes. Mentoring and onboarding developers, cross-team collaboration."
+    },
+    "image": {
+      "name": "MyOffice",
+      "color": "#F97380"
+    },
+    "inn": 7703807270,
+    "location": {
+      "ru": "Россия, г. Москва",
+      "en": "Russia, Moscow"
+    },
+    "products": ["https://myoffice.ru"],
+    "profession": {
+      "ru": "Старший Frontend Разработчик",
+      "en": "Senior Frontend Developer"
+    },
+    "url": "https://myoffice.ru"
   }
 ]

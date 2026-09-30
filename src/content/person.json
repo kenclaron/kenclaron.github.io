@@ -1,6 +1,6 @@
 {
-  "frameworks": ["React", "Vue", "MUI", "jQuery", "handlebars.js", "Bootstrap"],
-  "languages": ["TypeScript", "JavaScript", "Kotlin", "C#", "C++"],
+  "frameworks": ["React", "Vue", "Meteor", "Astro", "MUI", "jQuery", "Tailwind", "Bootstrap"],
+  "languages": ["TypeScript", "JavaScript", "Kotlin", "C#", "C++", "Go"],
   "tools": [
     "VS Code",
     "Git",
@@ -8,7 +8,8 @@
     "Confluence",
     "Docker",
     "Node.js",
-    "Vercel"
+    "Vercel",
+    "MCP"
   ],
   "email": "da.britov@yandex.ru",
   "url": "https://github.com/kenclaron",

@@ -6,14 +6,12 @@ import { SetterOrUpdater, useSetRecoilState } from "recoil";
 
 import styled from "@emotion/styled";
 import GitHub from "api/github";
-import OpenGraph from "api/opengraph";
 import REPOSITORIES from "content/repositories.json";
 
 import { ChipStatus, ChipStatusInformation } from "components/atoms/Chips";
 import { Stack } from "components/atoms/Stack";
 
 import RepositoriesContainer from "utils/containers/repositories.container";
-import useOnInit from "utils/hooks/useOnInit";
 import { Repositories } from "utils/types/github.type";
 
 enum ServiceStatus {
@@ -23,11 +21,7 @@ enum ServiceStatus {
   WAITING = "neutral",
 }
 
-const getStatus = () => {
-  return OpenGraph.getStatus(true)
-    .then((status) => status.code)
-    .catch(() => 404);
-};
+const getStatus = () => 200;
 
 const getRepositories = (recoil: SetterOrUpdater<Repositories>) => {
   return new Promise((resolve, reject) =>
@@ -52,7 +46,22 @@ function Status() {
   const { t } = useTranslation();
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-  const launchAPI = async () => {
+  const recoilRepos = useSetRecoilState(RepositoriesContainer.currentQuery);
+  const [hover, setHover] = React.useState<boolean>(false);
+  const [status, setStatus] = React.useState<ServiceStatus>(
+    ServiceStatus.WAITING
+  );
+
+  const showNotificationError = React.useCallback(() => {
+    enqueueSnackbar(t("notifications.requests.timeout"), {
+      variant: "error",
+      preventDuplicate: true,
+      persist: true,
+    });
+  }, [enqueueSnackbar, t]);
+
+
+  const launchAPI = React.useCallback(async () => {
     getRepositories(recoilRepos)
       .then(async () => {
         let status = ServiceStatus.WAITING;
@@ -74,23 +83,7 @@ function Status() {
         setStatus(status);
       })
       .catch(() => showNotificationError());
-  };
-
-  useOnInit(launchAPI);
-
-  const recoilRepos = useSetRecoilState(RepositoriesContainer.currentQuery);
-  const [hover, setHover] = React.useState<boolean>(false);
-  const [status, setStatus] = React.useState<ServiceStatus>(
-    ServiceStatus.WAITING
-  );
-
-  const showNotificationError = () => {
-    enqueueSnackbar(t("notifications.requests.timeout"), {
-      variant: "error",
-      preventDuplicate: true,
-      persist: true,
-    });
-  };
+  }, [closeSnackbar, recoilRepos, showNotificationError]);
 
   const [timer, setTimer] = React.useState<NodeJS.Timer>();
 

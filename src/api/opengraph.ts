@@ -1,35 +1,16 @@
-import axios from "axios";
+import type { Repositories } from "utils/types/github.type";
 
-const SERVICE = process.env.REACT_APP_API_SERVICE as string;
+const HASH = 1;
+
+const SERVICE_URL = `https://opengraph.githubassets.com/${HASH}`
 
 export class OpenGraph {
   /**
    * Get OpenGraph image
    */
-  static getImageURL(url: string) {
-    return SERVICE + `/opengraph/image/get?url=${url}`;
-  }
-
-  /**
-   * Get Status
-   */
-  static async getStatus(services: boolean = false): Promise<Status> {
-    return new Promise((resolve, reject) =>
-      axios
-        .get(SERVICE + "/status", { params: { services } })
-        .then((status) => resolve(status.data))
-        .catch(() => reject())
-    );
+  static getImageURL(full_name: Repositories[0]['full_name']) {
+    return [SERVICE_URL, full_name].join('/');
   }
 }
-
-type Status = {
-  message: string;
-  code: number;
-  services?: {
-    github: number;
-    opengraph: number;
-  };
-};
 
 export default OpenGraph;

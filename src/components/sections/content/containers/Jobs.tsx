@@ -34,7 +34,7 @@ export function Jobs() {
           <JobHistoryIcon size="100%" color={theme.colors.typography.primary} />
         }
       />
-      <GridContent style={{ gridTemplateColumns: "1fr 1fr" }}>
+      <GridContent>
         {jobs.map((job, index) => (
           <Job id={`job-${index}`} job={job} key={index} />
         ))}
