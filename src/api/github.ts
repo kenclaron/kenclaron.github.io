@@ -5,11 +5,8 @@ import { OctokitResponse } from "@octokit/types";
 import { Repositories, User } from "utils/types/github.type";
 
 const USERNAME = process.env.REACT_APP_USERNAME as string;
-const TOKEN = process.env.REACT_APP_GITHUB_TOKEN as string;
 
-const octokit = new Octokit({
-  auth: TOKEN,
-});
+const octokit = new Octokit();
 
 export class GitHub {
   /**

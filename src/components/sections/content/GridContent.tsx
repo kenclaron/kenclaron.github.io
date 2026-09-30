@@ -14,6 +14,10 @@ export const GridContent = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  @media ${DEVICE.desktop} {
+    grid-template-columns: 1fr 1fr;
+  }
+
   @media ${DEVICE.laptop} {
     grid-template-columns: 1fr 1fr;
   }

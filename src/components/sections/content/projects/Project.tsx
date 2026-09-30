@@ -59,19 +59,19 @@ export function Project({ id, repository, visible }: ProjectProps) {
       <Container id={id} min-height={384} justifyContent="center">
         <Picture>
           <Image
-            src={OpenGraph.getImageURL(repository.html_url)}
+            src={OpenGraph.getImageURL(repository.full_name)}
             alt={repository.name}
           />
         </Picture>
         <Title>{name}</Title>
         <Content style={{ textAlign: "justify" }}>{description}</Content>
-        {repository.language && (
+        {repository.language ? (
           <Stack style={{ padding: "16px 24px 0", flexWrap: "wrap", gap: 8 }}>
             <Chip style={{ padding: "8px 16px", width: "fit-content" }}>
               {repository.language}
             </Chip>
           </Stack>
-        )}
+        ) : <div />}
         <Stack
           $direction="row"
           style={{
@@ -246,19 +246,19 @@ export const Container: any = styled.article`
   &:focus-visible {
     box-shadow: ${(props: any) => props.theme.shadow};
     background-color: ${(props: any) =>
-      Color.mix(
-        props.theme.colors.accent.primary.inactive,
-        props.theme.colors.accent.primary.hovered
-      )};
+    Color.mix(
+      props.theme.colors.accent.primary.inactive,
+      props.theme.colors.accent.primary.hovered
+    )};
   }
 
   &:active {
     box-shadow: ${(props: any) => props.theme.shadow};
     background-color: ${(props: any) =>
-      Color.mix(
-        props.theme.colors.accent.primary.inactive,
-        props.theme.colors.accent.primary.pressed
-      )};
+    Color.mix(
+      props.theme.colors.accent.primary.inactive,
+      props.theme.colors.accent.primary.pressed
+    )};
   }
 `;
 
