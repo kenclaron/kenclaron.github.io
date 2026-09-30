@@ -31,7 +31,7 @@
   cd ./kenclaron.github.io
   npm install
   npm start
-  npm build
+  npm run build
 ```
 
 ### **Open Webpage**
