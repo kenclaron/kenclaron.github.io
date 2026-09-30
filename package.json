@@ -7,7 +7,7 @@
     "url": "https://github.com/kenclaron"
   },
   "homepage": "https://kenclaron.github.io/",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "types": "@types/react-app-env.d.ts",
   "dependencies": {
